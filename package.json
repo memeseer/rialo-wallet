@@ -1,0 +1,26 @@
+{
+  "name": "rialo-test-2",
+  "version": "1.0.0",
+  "description": "Rialo browser wallet for Vercel deployment",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@scure/bip39": "^2.2.0",
+    "bs58": "^6.0.0",
+    "micro-ed25519-hdkey": "^0.1.2",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.10"
+  }
+}
