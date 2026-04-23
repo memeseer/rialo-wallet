@@ -11,6 +11,7 @@ const THEME_KEY = "rialo-theme-v1";
 const RPC_PATH = "/api/rpc";
 const KELVINS_PER_RLO = 1_000_000_000;
 const CLAIM_AMOUNT = 1_000_000_000;
+const VALID_FROM_SKEW_MS = 120_000;
 const SYSTEM_PROGRAM = "11111111111111111111111111111111";
 
 function encodeShortvec(value) {
@@ -391,7 +392,7 @@ export default function App() {
     setError("");
 
     try {
-      const validFrom = Date.now();
+      const validFrom = Date.now() - VALID_FROM_SKEW_MS;
       const configHashPrefix = await getRecentValidatorConfigHashPrefix();
       const messageBytes = buildMessageBytes({
         sender: wallet.address,
